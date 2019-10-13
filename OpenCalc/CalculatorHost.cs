@@ -1,6 +1,8 @@
-﻿namespace OpenCalc
+﻿using System;
+
+namespace OpenCalc
 {
-    internal class CalculatorHost
+    public class CalculatorHost
     {
         private readonly ICalculator _calculator;
 

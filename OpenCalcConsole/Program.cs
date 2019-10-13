@@ -1,3 +1,5 @@
+using OpenCalc;
+using OpenCalc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +12,13 @@ namespace OpenCalcConsole
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            foreach (CalculatorHost calculator in CalculatorHostProvider.Calculators)
+            {
+                calculator.X = 5;
+                calculator.Y = 6;
+                Console.WriteLine(calculator.ToString());
+            }
+
             Console.ReadKey();
         }
     }
